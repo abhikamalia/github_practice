@@ -21,16 +21,18 @@
 </body>
 </html>
 <?php
-	$name = $_POST['name'];
-	$query = "INSERT INTO git(name) VALUES(?)";
-	$statement = $database -> prepare($query);
-	$statement -> bind_param('s' , $name);
-	$statement -> execute();
-	$result = mysqli_query($database , $query);
-	if($result){
-		echo "Inserted";
-	}
-	else{
-		echo "not inserted";
+	if(isset($_POST['submit'])){
+		$name = $_POST['name'];
+		$query = "INSERT INTO git(name) VALUES(?)";
+		$statement = $database -> prepare($query);
+		$statement -> bind_param('s' , $name);
+		$statement -> execute();
+		$result = mysqli_query($database , $query);
+		if($result){
+			echo "Inserted";
+		}
+		else{
+			echo "not inserted";
+		}	
 	}
 ?>
