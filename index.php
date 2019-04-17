@@ -11,6 +11,11 @@
 	<div align="center">
 		<h2>GitHub Practice</h2>
 		<h4>Hey there...</h4>
+		
+		<form action = "index.php" method = "post">
+			<input type ="text" name ="name" style = "width:50%">
+			<input type ="submit" name = "submit" value ="submit">
+		</form>
 		<a type="button" class="btn btn-primary" href="index2.php" style="background: blue;color: white;font-size: 20px;"> Click</a>
 	</div>
 </body>
